@@ -192,7 +192,7 @@ Historique des migrations : schéma initial → clustering sémantique (`Cluster
 
 - Google Trends donne un volume relatif, pas absolu. L'API Google Ads (Keyword Planner) comble en partie ce manque, mais ne chiffre que les volumes au-dessus d'un seuil publicitaire — la longue traîne reste sans chiffre exact (`autocomplete_depth` sert alors de signal de popularité de repli).
 - Les volumes Google Ads renvoyés sur un compte sans dépense publicitaire sont des représentants de tranche (10, 50, 500, 5000, 50000), pas une mesure exacte — d'où le champ `volume_is_bucketed` dans `KeywordMetric`.
-- Une fois `sakalavatours.com` indexé, connecter Google Search Console donnera les requêtes exactes des visiteurs réels — la donnée la plus fiable, en complément.
+- Une fois `le site` indexé, connecter Google Search Console donnera les requêtes exactes des visiteurs réels — la donnée la plus fiable, en complément.
 - Respecter un délai entre requêtes (`SEO_REQUEST_DELAY_SECONDS` dans `.env`) pour rester correct vis-à-vis des endpoints publics utilisés.
 
 ## Roadmap possible
@@ -200,4 +200,4 @@ Historique des migrations : schéma initial → clustering sémantique (`Cluster
 - Ajout d'un collecteur Bing Suggest (même interface `BaseCollector`)
 - Intégration Google Search Console API une fois le site indexé
 - Dashboard de visualisation (Streamlit ou export vers Grafana)
-- Cron sur l'infra `medevstack` existante (Docker + GitHub Actions)
+- Cron sur l'infra `vps` existante (Docker + GitHub Actions)
